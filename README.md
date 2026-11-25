@@ -15,3 +15,5 @@ Then open `http://localhost:4173/`.
 ## GitHub Pages
 
 Every push to `main` deploys the site through the workflow in `.github/workflows/pages.yml`.
+
+After deployment, the site is available at <https://inigss.github.io/CSST-106/>.
