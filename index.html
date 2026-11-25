@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A browser-based viewer for Computer Vision laboratory handouts."
+    />
+    <title>Vision Lab | Computer Vision Workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#dashboard" aria-label="Vision Lab home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M3.5 16s4.5-8 12.5-8 12.5 8 12.5 8-4.5 8-12.5 8S3.5 16 3.5 16Z" stroke="currentColor" stroke-width="2" />
+              <circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="2" />
+              <circle cx="16" cy="16" r="1.5" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>Vision Lab</strong>
+            <span>COMPUTER VISION</span>
+          </span>
+        </a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="#dashboard" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" />
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" />
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" />
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7" />
+            </svg>
+            Dashboard
+          </a>
+          <a class="nav-link" href="#lab-documents">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 3.5h7l4 4v13H7a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+              <path d="M14 3.5v4h4M8.5 12h7M8.5 15.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            Lab DOCX files
+            <span class="nav-count">7</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="sidebar-note">
+            <span class="note-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.5v2M12 18.5v2M20.5 12h-2M5.5 12h-2m14.51-6.01-1.42 1.42M7.41 16.59l-1.42 1.42m12.02 0-1.42-1.42M7.41 7.41 5.99 5.99" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7" />
+              </svg>
+            </span>
+            <strong>Ready to review?</strong>
+            <p>All seven lab handouts are available to read in your browser.</p>
+            <a href="#lab-documents">Browse handouts <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="sidebar-foot">
+            <span class="online-dot" aria-hidden="true"></span>
+            Workspace ready
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="breadcrumb">
+            <span id="breadcrumb-workspace">Workspace</span>
+            <span class="crumb-divider">/</span>
+            <strong id="current-page">Dashboard</strong>
+          </div>
+          <div class="topbar-right">
+            <span class="topbar-course">CSST 106</span>
+            <span class="avatar" aria-label="Instructor">I</span>
+          </div>
+        </header>
+
+        <main id="dashboard" class="dashboard-page">
+          <section class="welcome-row">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line"></span> COMPUTER VISION LABORATORY</div>
+              <h1>Your lab workspace,<br /><span>all in one view.</span></h1>
+              <p class="welcome-copy">
+                Browse and review all seven Computer Vision laboratory handouts from one place.
+              </p>
+            </div>
+            <div class="welcome-art" aria-hidden="true">
+              <div class="art-orbit orbit-one"></div>
+              <div class="art-orbit orbit-two"></div>
+              <div class="art-grid"></div>
+              <div class="focus-frame frame-one"></div>
+              <div class="focus-frame frame-two"></div>
+              <div class="art-center">
+                <svg viewBox="0 0 96 96" fill="none">
+                  <path d="M9 48s14-24 39-24 39 24 39 24S73 72 48 72 9 48 9 48Z" stroke="currentColor" stroke-width="2.5" />
+                  <circle cx="48" cy="48" r="12" stroke="currentColor" stroke-width="2.5" />
+                  <circle cx="48" cy="48" r="4.5" fill="currentColor" />
+                </svg>
+              </div>
+              <span class="art-label">VISION / 01</span>
+            </div>
+          </section>
+
+          <section class="workspace-banner" aria-label="Workspace status">
+            <div class="banner-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                <path d="m4.5 8.3 7.5 4.2 7.5-4.2M12 12.5v7.6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="banner-copy">
+              <strong id="workspace-status-title">Your handouts are ready</strong>
+              <span id="workspace-status-copy">Open a handout to read its contents in this browser.</span>
+            </div>
+            <span class="status-pill"><span></span><span id="workspace-status-pill">7 handouts ready</span></span>
+          </section>
+
+          <section class="documents-section" id="lab-documents">
+            <div class="section-heading">
+              <div>
+                <div class="section-kicker">LAB HANDOUTS</div>
+                <h2>Computer Vision handouts</h2>
+                <p>Select a handout to read it in the browser.</p>
+              </div>
+              <div class="activity-total"><span>7</span> files</div>
+            </div>
+            <div class="documents-grid">
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 01</span><span class="document-type">DOCX</span></div>
+                <h3>Introduction to Computer Vision</h3>
+                <p>Image manipulation · Weeks 1–2</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_01_Images.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 02</span><span class="document-type">DOCX</span></div>
+                <h3>Edge Detection</h3>
+                <p>Sobel and Canny · Weeks 3–4</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_02_Edge_Detection.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+                <span class="document-note">The handout heading identifies this as Exercise 3.</span>
+              </article>
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 03</span><span class="document-type">DOCX</span></div>
+                <h3>Histogram Equalization</h3>
+                <p>Contrast adjustment and CLAHE · Weeks 4–5</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_03_Histogram.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 04</span><span class="document-type">DOCX</span></div>
+                <h3>SURF Feature Detection</h3>
+                <p>Keypoints, descriptors, and matching · Week 6</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_04_SURF_Feature_Detection.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 05</span><span class="document-type">DOCX</span></div>
+                <h3>PCA Facial Recognition</h3>
+                <p>Eigenfaces and dimensionality reduction · Weeks 7–8</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_05_PCA_in_CV.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 06</span><span class="document-type">DOCX</span></div>
+                <h3>YOLO Object Detection</h3>
+                <p>Object detection and custom model training · Weeks 8–9</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_06_YOLOV8_Object_Detection.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+                <span class="document-note">The filename says YOLOv8; the handout content uses YOLOv11.</span>
+              </article>
+              <article class="document-card">
+                <div class="document-card-top"><span class="document-number">LAB 07</span><span class="document-type">DOCX</span></div>
+                <h3>Image Segmentation</h3>
+                <p>Thresholding, regions, edges, and semantic segmentation · Week 13</p>
+                <a class="document-download" href="activities/previews/viewer.html?file=CSST106_Lab_Experiment_07_Segmentation.docx">
+                  View handout <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            </div>
+            <p class="documents-footnote">The original DOCX files are unchanged. These browser previews include the handout text, tables, and embedded images; layout may differ slightly from Microsoft Word.</p>
+          </section>
+
+          <footer class="page-footer"><span>VISION LAB</span><span>Computer Vision Laboratory Workspace</span></footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

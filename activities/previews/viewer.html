@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Read the original Computer Vision DOCX handout in your browser." />
+    <title>Lab handout | Vision Lab</title>
+    <link rel="stylesheet" href="viewer.css" />
+    <script src="vendor/jszip.min.js" defer></script>
+    <script src="vendor/docx-preview.min.js" defer></script>
+    <script src="docx-viewer.js" defer></script>
+  </head>
+  <body>
+    <div id="docx-styles" hidden></div>
+    <header class="viewer-bar">
+      <a class="viewer-back" href="../../index.html#lab-documents">← All handouts</a>
+      <span class="viewer-title" id="viewer-title">Computer Vision lab handout</span>
+      <div class="viewer-actions">
+        <button class="zoom-button" id="zoom-out" type="button" aria-label="Zoom out">−</button>
+        <output class="zoom-level" id="zoom-level">100%</output>
+        <button class="zoom-button" id="zoom-in" type="button" aria-label="Zoom in">+</button>
+        <button class="fit-button" id="fit-width" type="button">Fit width</button>
+        <a class="original-link" id="original-link" hidden>Open original DOCX</a>
+      </div>
+    </header>
+    <main class="document-shell">
+      <div class="viewer-status" id="viewer-status" role="status" aria-live="polite">
+        Loading handout…
+      </div>
+      <p class="viewer-warning" id="viewer-warning" role="status" hidden></p>
+      <div class="docx-container" id="docx-container"></div>
+    </main>
+  </body>
+</html>
